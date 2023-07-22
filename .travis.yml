@@ -29,6 +29,7 @@ before_script:
   - echo "$VAULT_PASSWORD" > .vault_password
 
 script:
+ - echo "$VAULT_PASSWORD"
   # Basic role syntax check
   - ansible-playbook tests/travis.yml -i localhost, --vault-password-file .vault_password --syntax-check
 
